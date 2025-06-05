@@ -7,53 +7,49 @@ BASE_URL = "https://gnews.io/api/v4/search"
 #css
 st.markdown("""
     <style>
-    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora&family=Playfair+Display&family=Raleway:wght@600&display=swap" rel="stylesheet");
-/* Background */
-/* Body Background: Bluish-White with Grain */
+/* Base Reset and Body */
 body {
-    background: linear-gradient(135deg, #f4faff, #e8f1fb);
-    color: #1a1a1a;
-    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    position: relative;
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
     overflow-x: hidden;
 }
 
-/* Title Styling */
+/* Title */
 .title {
-    font-size: 48px;
-    font-weight: 700;
     text-align: center;
-    background: linear-gradient(90deg, #ffe259, #ffa751);
+    font-size: 48px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-top: 40px;
+    background: linear-gradient(90deg, #00eaff, #a9f1df);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: 'Playfair Display', serif;
-    text-shadow: 1px 1px 2px rgba(255,255,255,0.1);
-    margin: 40px 0 20px;
+    text-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
 }
 
 /* Search Container */
 .search-container {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 12px;
-    margin-bottom: 40px;
+    margin: 30px 0;
 }
 
 /* Search Box */
 .search-box {
     width: 320px;
     padding: 14px 20px;
-    border-radius: 30px;
+    border-radius: 50px;
     border: 1px solid rgba(255,255,255,0.3);
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
     color: #fff;
     font-size: 16px;
+    transition: 0.3s ease;
     outline: none;
-    transition: all 0.3s ease-in-out;
 }
 
 .search-box::placeholder {
@@ -63,69 +59,69 @@ body {
 /* Search Button */
 .search-button {
     padding: 14px 24px;
-    border-radius: 30px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #00e6e6, #66ffe6);
     border: none;
-    background: linear-gradient(135deg, #ffd700, #ff9900);
     color: #1a1a1a;
+    font-weight: bold;
     font-size: 16px;
-    font-weight: 600;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    transition: transform 0.2s ease, background 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 12px rgba(0,255,255,0.3);
 }
 
 .search-button:hover {
-    background: linear-gradient(135deg, #ffcc00, #ffae00);
+    background: linear-gradient(135deg, #66ffe6, #00e6e6);
     transform: scale(1.05);
 }
 
 /* News Card */
 .news-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
     padding: 24px;
-    border-radius: 15px;
     margin: 20px auto;
-    max-width: 700px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    max-width: 750px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s;
 }
 
 .news-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    box-shadow: 0 16px 32px rgba(0, 255, 255, 0.2);
 }
 
 /* News Title */
 .news-title {
     font-size: 26px;
-    font-weight: 700;
-    color: #50d8d7;
+    font-weight: bold;
     font-family: 'Raleway', sans-serif;
+    color: #76f9ff;
     margin-bottom: 10px;
+    text-shadow: 0 2px 8px rgba(0,255,255,0.3);
 }
 
 /* News Description */
 .news-description {
     font-size: 18px;
+    color: #e2e2e2;
     line-height: 1.6;
-    color: #e4e4e4;
     font-family: 'Lora', serif;
 }
 
 /* Links */
 a {
-    color: #00fff7;
-    font-weight: 600;
-    text-decoration: underline dotted;
-    transition: color 0.3s ease;
+    font-weight: bold;
+    color: #00e6e6;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
 }
 
 a:hover {
-    color: #ffdd57;
+    color: #ffcc00;
 }
-
     </style>
 """, unsafe_allow_html=True)
 
