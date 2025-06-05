@@ -20,26 +20,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Grain Texture Overlay */
-body::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('https://www.transparenttextures.com/patterns/fabric-of-squares.png');
-    opacity: 0.2; /* Adjust intensity of the grain */
-    pointer-events: none;
-    z-index: 0;
-}
-
-/* Ensures content stays above grain overlay */
-.title, .search-container, .news-card {
-    position: relative;
-    z-index: 1;
-}
-
-
 /* Title Styling */
 .title {
     font-size: 48px;
