@@ -9,13 +9,36 @@ st.markdown("""
     <style>
     @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora&family=Playfair+Display&family=Raleway:wght@600&display=swap" rel="stylesheet");
 /* Background */
+/* Body Background: Bluish-White with Grain */
 body {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    color: #f8f9fa;
+    background: linear-gradient(135deg, #f4faff, #e8f1fb);
+    color: #1a1a1a;
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
+    position: relative;
+    overflow-x: hidden;
 }
+
+/* Grain Texture Overlay */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/fabric-of-squares.png');
+    opacity: 0.2; /* Adjust intensity of the grain */
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Ensures content stays above grain overlay */
+.title, .search-container, .news-card {
+    position: relative;
+    z-index: 1;
+}
+
 
 /* Title Styling */
 .title {
