@@ -34,6 +34,12 @@ st.markdown("""
             margin-bottom: 15px;
             box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
             color: #fff;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Hover Effect */
+        .news-card:hover {
+            transform: scale(1.05);
         }
 
         /* News Title */
@@ -54,6 +60,7 @@ st.markdown("""
             font-weight: bold;
             color: #00e6e6;
             text-decoration: none;
+            transition: color 0.3s ease-in-out;
         }
         a:hover {
             color: #ffcc00;
