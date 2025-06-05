@@ -16,13 +16,54 @@ st.markdown("""
 
         /* Title Styling */
         .title {
-            font-size: 36px;
+            font-size: 42px;
             font-weight: bold;
             text-align: center;
             color: #fff;
+            font-family: 'Playfair Display', serif;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
             padding: 20px;
             border-radius: 10px;
+        }
+
+        /* Unique Search Bar */
+        .search-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .search-box {
+            width: 300px;
+            padding: 12px;
+            border-radius: 25px;
+            border: 2px solid #ffd700;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            color: white;
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .search-box::placeholder {
+            color: #ddd;
+        }
+
+        .search-button {
+            padding: 12px 20px;
+            border-radius: 25px;
+            border: none;
+            background: #ffd700;
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .search-button:hover {
+            background: #ffcc00;
         }
 
         /* News Card */
@@ -44,15 +85,17 @@ st.markdown("""
 
         /* News Title */
         .news-title {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: bold;
-            color: #ffd700;
+            color: #007bff;
+            font-family: 'Raleway', sans-serif;
         }
 
         /* News Description */
         .news-description {
             font-size: 18px;
             color: #e3e3e3;
+            font-family: 'Lora', serif;
         }
 
         /* Buttons */
@@ -68,6 +111,7 @@ st.markdown("""
 
     </style>
 """, unsafe_allow_html=True)
+
 
 st.markdown('<div class="title">Headline Sync - News Aggregator</div>', unsafe_allow_html=True)
 query = st.text_input("Search for news:")
