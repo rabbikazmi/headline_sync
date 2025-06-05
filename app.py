@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-API_KEY = "e9f35a70dabfa17fc0f07fcff3bb2384"
+API_KEY =
 BASE_URL = "https://gnews.io/api/v4/search"
 
 #css
